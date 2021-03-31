@@ -9,5 +9,5 @@
   <p>Admin can easily update, delete and do all operations</p>
   <h3>API</h3>
   <p>It Support Api funcinality for do CURD operation</p>
-<a href = "http://127.0.0.1:8000/pizzaShop/api">(http://127.0.0.1:8000/pizzaShop/api) For View all datas</a>
+<a href = "http://127.0.0.1:8000/pizzaShop/api">http://127.0.0.1:8000/pizzaShop/api</a><p>Get All Data</P<br>
 <a href = "http://127.0.0.1:8000/pizzaShop/api/create">(http://127.0.0.1:8000/pizzaShop/api/create) For Create New Datas</a>

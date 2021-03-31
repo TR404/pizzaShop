@@ -1,5 +1,5 @@
 <h2>pizzashop</h2>
-  <p>In this project there have a startup page. which open <a<a href="127.0.0.1:8000/pizzaShop/"</a>href="127.0.0.1:8000/pizzaShop/</p>
+  <p>In this project there have a startup page. which open <a href="127.0.0.1:8000/pizzaShop/">href="127.0.0.1:8000/pizzaShop/</a></p>
   <p>We can select any pizza and show price of pizzas</p>
   <p>After selection we have get some opeions live how many pizza want and they ask size</p>
   <p>After completed these setps they calculate pizzas price and that's it</p>

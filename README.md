@@ -11,5 +11,5 @@
   <p>It Support Api funcinality for do CURD operation</p>
 <a href = "http://127.0.0.1:8000/pizzaShop/api">http://127.0.0.1:8000/pizzaShop/api</a> Get All Data<br>
 <a href = "http://127.0.0.1:8000/pizzaShop/api/create">http://127.0.0.1:8000/pizzaShop/api/create</a> For Create New Datas<br>
-<a href = "http://127.0.0.1:8000/pizzaShop/api/1">http://127.0.0.1:8000/pizzaShop/api/<Id Number></a> For Update Datas<br>
-<a href = "http://127.0.0.1:8000/pizzaShop/api/1/delete">http://127.0.0.1:8000/pizzaShop/api/#Id Number/delete</a> For Delete Datas<br>
+<a href = "http://127.0.0.1:8000/pizzaShop/api/1">http://127.0.0.1:8000/pizzaShop/api/Id_Number</a> For Update Datas<br>
+<a href = "http://127.0.0.1:8000/pizzaShop/api/1/delete">http://127.0.0.1:8000/pizzaShop/api/#Id_Number/delete</a> For Delete Datas<br>

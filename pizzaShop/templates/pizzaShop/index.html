@@ -1,0 +1,23 @@
+{% extends 'pizzaShop/base.html'%}
+
+{% load static %}
+{% block content %}
+
+	<div class = "row">
+	{% for value in pizza %}
+	<div class = "col-lg-4 col-md-6">
+	
+		<h2>{{value.title}}</h2><br>
+		
+		
+		<a href="{% url 'detail' value.id %}">
+		<img src = "{{value.image.url}}" class ="img-fluid mb-2" >
+		</a>
+		<p>{{value.description|striptags|truncatechars:100}}</p>
+		<p>Small only ₹{{value.small}}, Medium only ₹{{value.medium}}, Large only ₹{{value.large}}</p>
+	</div>
+	{% endfor %}
+	</div>
+	{% endblock %}
+	
+

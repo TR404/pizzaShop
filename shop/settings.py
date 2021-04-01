@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'pj^(33^sq3j-%!ufi)&xm15)+tnq)-_0=87r%$zuqrr0pu5q1!'
+SECRET_KEY = 'w%if+#(hyz05hy3y5-r@my6+%rrj*1i*q5@wf^4*v$gxa!p23o'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'pizzaShop',
-    'rest_framework',
+     'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'shop.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'DB1',
+        'NAME': 'DB2',
         'USER' : 'postgres',
         'PASSWORD' : 'patanahi',
         'HOST': '127.0.0.1',
@@ -124,6 +124,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-
+LOGIN_URL = '/login'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

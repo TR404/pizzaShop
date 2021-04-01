@@ -14,15 +14,25 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
 from django.conf.urls.static import static
 from django.conf import settings
+from pizzaShop.api import PizzaCreateApi, PizzaApi, PizzaUpdateApi,  PizzaDeleteApi
+from pizzaShop import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('pizzaShop/', include('pizzaShop.urls')),
+	path('admin/', admin.site.urls),
+	path('', views.home, name = 'home'),
+	path('index/', views.index, name = 'index'),
+	path('order/', views.order, name = 'order'),
+	path('<int:detailId>/',views.detail, name = 'detail'),
+	path('signup/', views.signupuser, name = 'signupuser'),
+	path('logout/', views.logoutUser, name = 'logoutUser'),
+	path('login/', views.loginUser, name = 'loginUser'),
+	path('api',PizzaApi.as_view()),
+	path('api/create',PizzaCreateApi.as_view()),
+	path('api/<int:pk>',PizzaUpdateApi.as_view()),
+	path('api/<int:pk>/delete',PizzaDeleteApi.as_view()),
 ]
-
-
 
 urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

@@ -1,4 +1,4 @@
-
+{% if user.is_authenticated %}
 <head>
 	<meta charset = "UTF-8">
 	<meta name = "viewport" content = "widht = device-width, initial-scale = 1.0">
@@ -9,22 +9,21 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-{% load static %}
+Log In : {{user.username}}
 
 
-	<div class = "row">
-	{% for value in pizza %}
-	<div class = "col-lg-4 col-md-6">
+<form action = "{% url 'logoutUser' %}" method = "POST">
+ {% csrf_token %} 
+ 
+ <button type = "submit">Logout</button>
+</form>
+
+{% else %}
+
+<a href = "{% url 'signupuser' %}">Sign Up</a>
+<a href = "{% url 'loginUser' %}">Login</a>
 	
-		<h2>{{value.title}}</h2><br>
-		
-		
-		<a href="{% url 'pizzaShop:detail' value.id %}">
-		<img src = "{{value.image.url}}" class ="img-fluid mb-2" >
-		</a>
-		<p>{{value.description|striptags|truncatechars:100}}</p>
-		<p>Small only ₹{{value.small}}, Medium only ₹{{value.medium}}, Large only ₹{{value.large}}</p>
-	</div>
-	{% endfor %}
-	</div>
-	
+{% endif %}
+
+
+{% block content %} {% endblock %}

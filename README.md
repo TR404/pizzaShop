@@ -15,3 +15,4 @@
 <a href = "http://127.0.0.1:8000/api/1/delete">http://127.0.0.1:8000/api/Id_Number/delete</a> For Delete Datas<br>
 # shoppizza
 # shoppizza
+# shoppizza
